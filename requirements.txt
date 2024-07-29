@@ -58,7 +58,7 @@ pdf2image==1.17.0
 pillow==10.4.0
 pip==20.2.3
 proto-plus==1.24.0
-protobuf==4.25.3
+protobuf==3.20.1
 pyarrow==17.0.0
 pyasn1==0.6.0
 pyasn1-modules==0.4.0
