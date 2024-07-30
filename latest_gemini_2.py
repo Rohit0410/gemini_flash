@@ -40,7 +40,7 @@ def preprocessing(document):
 def get_gemini_response(input,pdf_cotent,prompt):
     model=genai.GenerativeModel('gemini-1.5-flash')
     response=model.generate_content([input,pdf_content,prompt],generation_config = genai.GenerationConfig(
-        temperature=0.7
+        temperature=0.4
     ))
     return response.text
 
