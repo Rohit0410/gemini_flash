@@ -6,7 +6,6 @@ import streamlit as st
 import os
 import io
 from PIL import Image 
-import pdf2image
 import google.generativeai as genai
 import pandas as pd
 import docx2txt
