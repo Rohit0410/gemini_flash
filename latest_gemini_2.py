@@ -56,7 +56,7 @@ def input_pdf_setup(uploaded_file):
 ## Streamlit App
 
 st.set_page_config(page_title="ATS Resume EXpert")
-st.header("ATS Tracking System")
+st.header("Talent-Match 360")
 input_text=st.text_area("Job Description: ",key="input")
 # jd_upload=st.file_uploader("Upload your job description...")
 # if jd_upload is not None:
