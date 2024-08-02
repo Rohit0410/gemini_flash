@@ -6,7 +6,7 @@ import streamlit as st
 import os
 import io
 from PIL import Image 
-# import pdf2image
+import pdf2image
 import google.generativeai as genai
 import pandas as pd
 import docx2txt
@@ -40,7 +40,7 @@ def preprocessing(document):
 def get_gemini_response(input,pdf_cotent,prompt):
     model=genai.GenerativeModel('gemini-1.5-flash')
     response=model.generate_content([input,pdf_content,prompt],generation_config = genai.GenerationConfig(
-        temperature=0.4
+        temperature=0.7
     ))
     return response.text
 
@@ -95,7 +95,7 @@ input_prompt1 = """
 input_prompt3 = """
 You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of {} and  ATS functionality, 
 your task is to evaluate the resume against the provided job description. give me the percentage of match if the resume matches
-the job description. First the output should come as percentage and then keywords missing and last final thoughts.
+the job description. First the output should come as there is any gap in the career and matching percentage and can we consider him C-suite or C-1 professional e.g. Yes(reason) or No(reason) and then keywords missing and last final thoughts.
 """.format(response1.text)
 
 print("input",input_prompt3)
